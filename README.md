@@ -1,4 +1,4 @@
-# GoControl GD00Z for Homey
+# GoControl for Homey
 
 A Homey app for the **GoControl / Linear GD00Z** Z-Wave garage door opener. Homey has no built-in support for this opener, so without an app it pairs as a generic Z-Wave device with no controls.
 
