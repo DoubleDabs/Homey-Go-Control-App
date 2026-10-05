@@ -1,0 +1,93 @@
+{
+  "id": "com.standish.gd00z",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "GoControl Garage Door"
+  },
+  "description": {
+    "en": "Open and close your GoControl / Linear GD00Z garage door opener from Homey."
+  },
+  "category": [
+    "security"
+  ],
+  "brandColor": "#202C3C",
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "DoubleDabs"
+  },
+  "drivers": [
+    {
+      "id": "gd00z",
+      "name": {
+        "en": "GD00Z Garage Door Opener"
+      },
+      "class": "garagedoor",
+      "capabilities": [
+        "garagedoor_closed",
+        "alarm_generic",
+        "alarm_battery"
+      ],
+      "capabilitiesOptions": {
+        "alarm_generic": {
+          "title": {
+            "en": "Door problem"
+          }
+        },
+        "alarm_battery": {
+          "title": {
+            "en": "Tilt sensor battery low"
+          }
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zwave"
+      ],
+      "images": {
+        "small": "/drivers/gd00z/assets/images/small.png",
+        "large": "/drivers/gd00z/assets/images/large.png",
+        "xlarge": "/drivers/gd00z/assets/images/xlarge.png"
+      },
+      "zwave": {
+        "manufacturerId": 335,
+        "productTypeId": [
+          18244
+        ],
+        "productId": [
+          13616
+        ],
+        "requireSecure": true,
+        "learnmode": {
+          "image": "/drivers/gd00z/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press and release the Learn button on the GD00Z. The blue LED flashes while it pairs."
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/gd00z/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press and release the Learn button on the GD00Z to remove it from its current network."
+          }
+        },
+        "associationGroups": [
+          1
+        ]
+      }
+    }
+  ],
+  "homepage": "https://github.com/DoubleDabs/homey-gocontrol-gd00z",
+  "support": "https://github.com/DoubleDabs/homey-gocontrol-gd00z/issues",
+  "source": "https://github.com/DoubleDabs/homey-gocontrol-gd00z"
+}
